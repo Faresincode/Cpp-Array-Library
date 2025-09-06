@@ -1,109 +1,158 @@
-# Cpp-Array-Library
+# clsArray - Array Utilities in C++
 A simple and efficient C++ library  👍 that provides ready-to-use functions for working with arrays. Includes methods for printing, shuffling, copying, counting odd/even/prime numbers, finding min/max values, summing, and calculating averages.  Perfect for students and developers who want to save time handling arrays in their projects.
 ------------------------------------------------------------
-Features
-------------------------------------------------------------
-- Printing
-  - Print arrays of numbers (int, float, short, double, long long)
-  - Print arrays of char and string
 
-- Counting
-  - Odd / Even numbers
-  - Positive / Negative numbers
-  - Digit frequency inside a number
+---
 
-- Math on Arrays
-  - Maximum and minimum values
-  - Sum and average of elements
-  - Element-wise sum of two arrays
+## 📌 Features
 
-- Array Operations
-  - Shuffle arrays
-  - Add new elements (number, character, string)
-  - Copy arrays
-  - Extract distinct numbers
-  - Extract prime, odd, even, perfect, and palindrome numbers
+- Print arrays of different types (`int`, `float`, `short`, `double`, `long long`, `string`, `char`)
+- Count **odd, even, positive, negative numbers**
+- Find **maximum and minimum** values in arrays
+- Shuffle arrays randomly
+- Fill arrays with random numbers
+- Add numbers, characters, or strings to arrays dynamically
+- Copy arrays and extract subsets like **prime, odd, even, perfect, palindrome numbers**
+- Check existence of values in arrays (`IsNumberInArray`, `IsStringInArray`, etc.)
+- Count frequency of numbers, characters, or strings
+- Perform **sum and average** operations on arrays
+- Add distinct numbers to a new array
 
-- Search
-  - Find position of an element
-  - Check if a number, character, or string exists
-  - Count repetitions of numbers, characters, or strings
+---
 
-------------------------------------------------------------
-File Structure
-------------------------------------------------------------
-project/
-│── clsArray.h     # Array utility class header
-│── clscMath.h     # Math helpers (odd, even, prime, etc.)
-│── clsUtil.h      # Utility functions used by clsArray
-│── main.cpp       # Example usage
+## 📂 File Structure
 
-------------------------------------------------------------
-Example Usage
-------------------------------------------------------------
+- **`clsArray.h`** → Main header file containing the `clsArray` class.
+- **`clscMath.h`** → Helper math utilities (used for checks like `IsOdd`, `IsPrime`, etc.).
+- **`clsUtil.h`** → Utility functions (used for swapping, etc.).
+- **`main.cpp`** → Example usage and test file.
 
-[Example 1] Printing an Array
-------------------------------
-Code:
+---
+
+## 🚀 Example Usage
+
+### Example 1: Print an Array
+
+```cpp
+#include <iostream>
+#include "clsArray.h"
+
+int main() {
     int arr[5] = {1, 2, 3, 4, 5};
     clsArray::PrintArrayOfNumber(arr, 5);
+    return 0;
+}
+```
 
-Output:
-    1 2 3 4 5
+**Output:**
+```
+1 2 3 4 5
+```
 
+---
 
-[Example 2] Counting Odd and Even Numbers
------------------------------------------
-Code:
+### Example 2: Count Odd and Even Numbers
+
+```cpp
+#include <iostream>
+#include "clsArray.h"
+
+int main() {
     int arr[6] = {1, 2, 3, 4, 5, 6};
-    cout << "Odd count: " << clsArray::CountOddNumberInArray(arr, 6) << endl;
-    cout << "Even count: " << clsArray::CountEvenNumberInArray(arr, 6) << endl;
+    std::cout << "Odd Count: " << clsArray::CountOddNumberInArray(arr, 6) << std::endl;
+    std::cout << "Even Count: " << clsArray::CountEvenNumberInArray(arr, 6) << std::endl;
+    return 0;
+}
+```
 
-Output:
-    Odd count: 3
-    Even count: 3
+**Output:**
+```
+Odd Count: 3
+Even Count: 3
+```
 
+---
 
-[Example 3] Finding Min, Max, Sum, and Average
------------------------------------------------
-Code:
-    int arr[6] = {10, 20, 5, 30, 15, 25};
-    cout << "Max: " << clsArray::MaxNumberInArray(arr, 6) << endl;
-    cout << "Min: " << clsArray::MinNumberInArray(arr, 6) << endl;
-    cout << "Sum: " << clsArray::SumArrayNumbers(arr, 6) << endl;
-    cout << "Average: " << clsArray::AverageArrayNumbers(arr, 6) << endl;
+### Example 3: Find Max and Min
 
-Output:
-    Max: 30
-    Min: 5
-    Sum: 105
-    Average: 17.5
+```cpp
+#include <iostream>
+#include "clsArray.h"
 
+int main() {
+    int arr[5] = {12, 45, 7, 32, 19};
+    std::cout << "Max: " << clsArray::MaxNumberInArray(arr, 5) << std::endl;
+    std::cout << "Min: " << clsArray::MinNumberInArray(arr, 5) << std::endl;
+    return 0;
+}
+```
 
-[Example 4] Shuffling an Array
--------------------------------
-Code:
-    int arr[5] = {1, 2, 3, 4, 5};
+**Output:**
+```
+Max: 45
+Min: 7
+```
+
+---
+
+### Example 4: Shuffle an Array
+
+```cpp
+#include <iostream>
+#include "clsArray.h"
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
     clsArray::ShuffleArrayOfNumber(arr, 5);
     clsArray::PrintArrayOfNumber(arr, 5);
+    return 0;
+}
+```
 
-Sample Output:
-    3 1 5 2 4
+**Output (example run):**
+```
+30 50 10 40 20
+```
 
+---
 
-[Example 5] Copying Prime Numbers
-----------------------------------
-Code:
-    int arr[6] = {2, 4, 5, 9, 11, 12};
-    int primes[6], len = 0;
-    clsArray::CopyPrimeNumbers(arr, primes, 6, len);
-    clsArray::PrintArrayOfNumber(primes, len);
+### Example 5: Sum and Average
 
-Output:
-    2 5 11
+```cpp
+#include <iostream>
+#include "clsArray.h"
 
-------------------------------------------------------------
-License
-------------------------------------------------------------
-This project is open-source and available under the MIT License.
+int main() {
+    int arr[4] = {10, 20, 30, 40};
+    std::cout << "Sum: " << clsArray::SumArrayNumbers(arr, 4) << std::endl;
+    std::cout << "Average: " << clsArray::AverageArrayNumbers(arr, 4) << std::endl;
+    return 0;
+}
+```
+
+**Output:**
+```
+Sum: 100
+Average: 25
+```
+
+---
+
+## 🔧 Requirements
+
+- C++ compiler supporting C++11 or later
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute it with proper attribution.
+
+---
+
+## 🤝 Contribution
+
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork the repo and submit pull requests.
 
