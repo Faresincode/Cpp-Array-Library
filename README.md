@@ -3,30 +3,43 @@ A simple and efficient C++ library  👍 that provides ready-to-use functions fo
 ------------------------------------------------------------
 Features
 ------------------------------------------------------------
-- Print arrays (int, float, short, double, long long, char, string)
-- Shuffle arrays (numbers and strings)
-- Count numbers (odd, even, positive, negative)
-- Count frequency of digits in numbers
-- Find maximum and minimum values
-- Add new elements to arrays
-- Copy arrays (all types)
-- Extract distinct, prime, odd, even, perfect, and palindrome numbers
-- Search arrays (find, check existence)
-- Count repetitions of elements
-- Sum two arrays element-wise
-- Sum and average of array elements
+- Printing
+  - Print arrays of numbers (int, float, short, double, long long)
+  - Print arrays of char and string
+
+- Counting
+  - Odd / Even numbers
+  - Positive / Negative numbers
+  - Digit frequency inside a number
+
+- Math on Arrays
+  - Maximum and minimum values
+  - Sum and average of elements
+  - Element-wise sum of two arrays
+
+- Array Operations
+  - Shuffle arrays
+  - Add new elements (number, character, string)
+  - Copy arrays
+  - Extract distinct numbers
+  - Extract prime, odd, even, perfect, and palindrome numbers
+
+- Search
+  - Find position of an element
+  - Check if a number, character, or string exists
+  - Count repetitions of numbers, characters, or strings
 
 ------------------------------------------------------------
 File Structure
 ------------------------------------------------------------
 project/
 │── clsArray.h     # Array utility class header
-│── clscMath.h     # Required math helpers
-│── clsUtil.h      # Used for some array operations
+│── clscMath.h     # Math helpers (odd, even, prime, etc.)
+│── clsUtil.h      # Utility functions used by clsArray
 │── main.cpp       # Example usage
 
 ------------------------------------------------------------
-Example Applications and Outputs
+Example Usage
 ------------------------------------------------------------
 
 [Example 1] Printing an Array
@@ -78,8 +91,8 @@ Sample Output:
     3 1 5 2 4
 
 
-[Example 5] Copy Prime Numbers from Array
-------------------------------------------
+[Example 5] Copying Prime Numbers
+----------------------------------
 Code:
     int arr[6] = {2, 4, 5, 9, 11, 12};
     int primes[6], len = 0;
@@ -93,3 +106,4 @@ Output:
 License
 ------------------------------------------------------------
 This project is open-source and available under the MIT License.
+
