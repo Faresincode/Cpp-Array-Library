@@ -1,6 +1,8 @@
 # clsArray - Array Utilities in C++
-A simple and efficient C++ library  👍 that provides ready-to-use functions for working with arrays. Includes methods for printing, shuffling, copying, counting odd/even/prime numbers, finding min/max values, summing, and calculating averages.  Perfect for students and developers who want to save time handling arrays in their projects.
-------------------------------------------------------------
+
+This repository provides a powerful utility class ✨  **`clsArray`** in C++ that implements various array operations such as printing, searching, counting, adding, copying, shuffling, and performing numeric computations on arrays of different types.
+
+---
 
 ---
 
