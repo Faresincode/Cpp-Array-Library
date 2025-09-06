@@ -1,6 +1,7 @@
 # clsArray - Array Utilities in C++
 
-This repository provides a powerful utility class ✨  **`clsArray`** in C++ that implements various array operations such as printing, searching, counting, adding, copying, shuffling, and performing numeric computations on arrays of different types.
+This repository provides a powerful utility class ✨ **`clsArray`** in C++ that implements various array operations such as printing, searching, counting, adding, copying, shuffling, and performing numeric computations on arrays of different types.
+
 ---
 
 ## 📌 Features
